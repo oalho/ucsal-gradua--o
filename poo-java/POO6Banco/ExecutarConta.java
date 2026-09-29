@@ -25,19 +25,25 @@ public class ExecutarConta{
 
         do{
             System.out.println("gostaria de realizar um saque, deposito ou finalizar?");
-            
-            switch(r){             
-                case 1: c.saque();
-                case 2: c.deposito();
+            r = scan.nextLine();
+
+            if (r.equalsIgnoreCase("saque")){
+                System.out.println("informe o valor a ser sacado");
+                    float valor = scan.nextFloat();
+                    scan.nextLine();
+                    c.saque(valor);
+            }else if (r.equalsIgnoreCase("deposito")){
+                System.out.println("Informe o valor a ser depositado");
+                    float valor = scan.nextFloat();
+                    scan.nextLine();
+                    c.deposito(valor);
+            }
             }
         while(r.equalsIgnoreCase("finalizar"));
 
         System.out.println("Dados da conta atualizados:");
         System.out.println("Número " + c.getN() + ", Nome do titular " + c.getTitular() + ", saldo " + c.getSaldo());
 
-    
-    }
-
-    scan.close();
+              scan.close();
     }
 }
