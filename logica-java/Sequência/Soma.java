@@ -5,7 +5,7 @@ public class Soma{
 		int n1, n2, soma;
 			n1 = sc.nextInt();
 			n2 = sc.nextInt();
-		soma = n1 + n2;
+			soma = n1 + n2;
 			System.out.print("a soma é " + soma);
 	
 	sc.close();
