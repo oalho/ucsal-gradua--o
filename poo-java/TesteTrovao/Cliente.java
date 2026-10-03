@@ -1,7 +1,14 @@
+package TesteTrovao;
 public class Cliente{
     private String nome;
     private String dataNascimento;
     private String email;
+
+    public Cliente(String nome, String email , String dataNascimento){
+        this.nome = nome;
+        this.email = email;        
+        this.dataNascimento = dataNascimento;
+    }
 
     public String getNome() {
         return nome;

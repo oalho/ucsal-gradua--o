@@ -1,3 +1,5 @@
+package TesteTrovao;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,6 +53,7 @@ public class NotaVenda {
 
     public Double total(){
         double total = 0;
+        double soma = 0;
 
         for(ItensNota obj: itens){
             soma += obj.subtotal();
@@ -59,5 +62,9 @@ public class NotaVenda {
         return total;
     }
 
+    @Override
+    public String toString() {
+        return "data: " + data + " , numero: " + numero + ", cliente: " + cliente + ", itens: " + itens + "";
+    }
 
 }

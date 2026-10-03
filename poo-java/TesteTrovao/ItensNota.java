@@ -1,3 +1,5 @@
+package TesteTrovao;
+
 public class ItensNota{
     private Integer quantidade;
     private Double preco;
@@ -31,4 +33,11 @@ public class ItensNota{
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
+
+    @Override
+    public String toString() {
+        return "ItensNota quantidade: " + quantidade + ", preco: " + preco + ", produto: " + produto + "";
+    }
+
+    
 }
