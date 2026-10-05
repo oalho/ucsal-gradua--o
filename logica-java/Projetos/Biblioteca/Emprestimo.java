@@ -1,7 +1,6 @@
 package Biblioteca;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.ArrayList;
 
 public class Emprestimo {
     private String dataEmprestimo;
@@ -47,5 +46,14 @@ public class Emprestimo {
         this.livros = livros;
     }
 
+    public void addLivro(Livro livro){
+        livros.add(livro);
+    }
 
+    @Override
+    public String toString() {
+        return "Emprestimo [dataEmprestimo=" + dataEmprestimo + ", dataDevolucao=" + dataDevolucao + ", leitor="
+                + leitor + ", livros=" + livros + "]";
+    }
+    
 }

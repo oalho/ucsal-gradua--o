@@ -3,12 +3,10 @@ package Biblioteca;
 public class Leitor {
     private String nome;
     private String email;
-    private Livro livro;
 
-    public Leitor(String nome, String email, Livro livro){
+    public Leitor(String nome, String email){
         this.nome = nome;
         this.email = email;
-        this.livro = livro;
     }
 
     public String getNome() {
@@ -27,13 +25,9 @@ public class Leitor {
         this.email = email;
     }
 
-    public Livro getLivro() {
-        return livro;
+    @Override
+    public String toString() {
+        return "Leitor [nome=" + nome + ", email=" + email + "]";
     }
-
-    public void setLivro(Livro livro) {
-        this.livro = livro;
-    }
-
     
 }

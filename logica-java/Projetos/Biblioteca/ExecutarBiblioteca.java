@@ -12,7 +12,11 @@ public class ExecutarBiblioteca {
         String nome = scan.next();
         System.out.println("Informe o email");
         String email = scan.next();
-        Cliente cliente = new Cliente(nome, email);
+        Leitor leitor = new Leitor (nome, email);
+        System.out.println("Data atual:");
+        String dataEmprestimo = scan.next();
+        String dataDevolucao = dataEmprestimo + 7;
+        Emprestimo emprestimo = new Emprestimo(dataEmprestimo, dataDevolucao, leitor);
 
         System.out.println("quantos livros quer tomar empréstimo?");
         int livros = scan.nextInt();
@@ -24,14 +28,14 @@ public class ExecutarBiblioteca {
             String isbn = scan.next();
             System.out.println("Autor do livro");
             String autor = scan.next();
-
             Livro livro = new Livro(titulo, isbn, autor);
+            
+            emprestimo.addLivro(livro);
         }
 
         System.out.println("Emprestimo finalizado!");
         System.out.println("Resumo");
-    
-        
+        System.out.println(emprestimo);
     
     scan.close();
     }
